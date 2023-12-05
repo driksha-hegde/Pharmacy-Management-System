@@ -106,44 +106,38 @@
         <ul class="sideber__ber">
             <h3 class="sideber__panel"><i id="left" class="fas fa-laugh-wink"></i> PMS</h3>
             
-            <?php if ( 'admin' == $sessionRole || 'manager' == $sessionRole || 'pharmacist' == $sessionRole ) {?>
+            <?php if ( 'admin' == $sessionRole  ) {?>
                 <!-- For Admin, Manager, Pharmacist-->
-                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addSalesman' == $id ) {
-                                                                            echo " active";
-                                                                        }?>">
+                <li id="left" class="sideber__item sideber__item--modify">
                  <a href="index.php?id=dashboard"><i id="left" class="fas fa-tachometer-alt"></i>Dashboard</a>
-                
-                 <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addSalesman' == $id ) {
-                                                                            echo " active";
-                                                                        }?>">
-                 
-                <a href="index.php?id=addSalesman"><i id="left" class="fas fa-user-plus"></i>Add Customer</a>
-                </li><?php ?>
-            <li id="left" class="sideber__item<?php if ( 'allSalesman' == $id ) {
-                                                echo " active";
-                                            }?>">
-                <a href="index.php?id=allSalesman"><i id="left" class="fas fa-user"></i>All Customer</a>
-            </li>
-
                 </li><?php }?>
-                
-            <li id="left" class="sideber__item<?php if ( 'allSalesman' == $id ) {
-                                                echo " active";
-                                            }?>">
 
-            <?php if ( 'admin' == $sessionRole ) {?>
+                
+            
+            <?php if ( 'admin' == $sessionRole || 'pharmacist'==$sessionRole ) {?>
                 <!-- Only For Admin -->
                 <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addManager' == $id ) {
                                                                             echo " active";
                                                                         }?>">
                     <a href="index.php?id=addManager"><i id="left" class="fas fa-user-plus"></i></i>Add Medicine</a>
+                    <li id="left" class="sideber__item sideber__item--modify"><a href="index.php?id=addSalesman"><i id="left" class="fas fa-user-plus"></i></i>Add Customer</a></li>
+                    <li id="left" class="sideber__item sideber__item--modify"><a href="index.php?id=allSalesman"><i id="left" class="fas fa-user"></i>All Customer</a></li>
                 </li><?php }?>
-            <li id="left" class="sideber__item<?php if ( 'allManager' == $id ) {
-    echo " active";
-}?>">
+                    <li id="left" class="sideber__item<?php if ( 'allManager' == $id ) {
+                echo " active";
+            }?>">
                 <a href="index.php?id=allManager"><i id="left" class="fas fa-user"></i>All Medicines</a>
             </li>
-            <?php if ( 'admin' == $sessionRole || 'manager' == $sessionRole ) {?>
+          
+
+            <!-- For salesman -->
+            
+            <!-- For salesman -->
+
+
+           
+
+            <?php if ( 'admin' == $sessionRole ) {?>
                 <!-- For Admin, Manager -->
                 <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addPharmacist' == $id ) {
                                                                             echo " active";
@@ -151,30 +145,15 @@
                     <a href="index.php?id=addPharmacist"><i id="left" class="fas fa-user-plus"></i></i>Add
                         Pharmacist</a>
                 </li><?php }?>
-            <li id="left" class="sideber__item<?php if ( 'allPharmacist' == $id ) {
-    echo " active";
-}?>">
+                <li id="left" class="sideber__item<?php if ( 'allPharmacist' == $id ) {
+                    echo " active";
+                }?>">
                 <a href="index.php?id=allPharmacist"><i id="left" class="fas fa-user"></i>All Pharmacist</a>
-            </li>
-            <?php if ( 'admin' == $sessionRole || 'manager' == $sessionRole || 'pharmacist' == $sessionRole ) {?>
-                <!-- For Admin, Manager, Pharmacist-->
-                <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addSalesman' == $id ) {
-                                                                            echo " active";
-                                                                        }?>">
-                 <!-- <a href="index.php?id=dashboard"><i id="left" class="fas fa-tachometer-alt"></i>Dashboard</a> -->
+                </li>
+
+            
                 
-                </li><?php }?>
-                <!-- <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addSalesman' == $id ) {
-                                                                            echo " active";
-                                                                        }?>">
-                 
-                <a href="index.php?id=addSalesman"><i id="left" class="fas fa-user-plus"></i>Add Customer</a>
-                </li><?php ?>
-            <li id="left" class="sideber__item<?php if ( 'allSalesman' == $id ) {
-                                                echo " active";
-                                            }?>">
-                <a href="index.php?id=allSalesman"><i id="left" class="fas fa-user"></i>All Customer</a>
-            </li> -->
+                
         </ul>
     
     </section>

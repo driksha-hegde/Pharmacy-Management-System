@@ -42,7 +42,7 @@ button:active .btn:active .btn.active {
       font-size: 30px;
       font-weight: bold;
       padding: 10px 0;
-      color: #fff;
+      color: rgb(16, 15, 99), 255, 255);
     }
 
     .input {
@@ -67,7 +67,7 @@ button:active .btn:active .btn.active {
       }
 
       .right {
-        color: #4e73df;
+        color: #9c5f14;
         border-color: #ccc;
         transition: border-color 0.5s;
         right: 5px;
@@ -131,8 +131,8 @@ button:active .btn:active .btn.active {
       margin-top: 10px;
       padding: 14px 0;
       transition: 0.5s ease;
-      border: 1px solid #4e73df;
-      background-color: #4e73df;
+      border: 1px solid #9c5f14;
+      background-color: #9c5f14;
 
       &:hover {
         color: #36b9cc;

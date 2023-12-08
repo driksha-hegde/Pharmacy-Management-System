@@ -37,7 +37,7 @@
     <title>Dashboard</title>
 </head>
 
-<body>
+<body class="dash">
     <!--------------------------------- Secondary Navber -------------------------------->
     <section class="topber">
         <div class="topber__title">
@@ -86,7 +86,7 @@
                 <div class="dropdown">
                     <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <?php
-                        echo "$fname $lname (" . ucwords( $role ) . " )";
+                        echo "$fname $lname ";
                         }
                     ?>
                     </button>
@@ -104,9 +104,9 @@
     <!--------------------------------- Sideber -------------------------------->
     <section id="sideber" class="sideber">
         <ul class="sideber__ber">
-            <h3 class="sideber__panel"><i id="left" class="fas fa-laugh-wink"></i> PMS</h3>
+            <h3 class="sideber__panel"><i id="left" class="fas fa-laugh-wink"></i> Pharmacy Management System</h3>
             
-            <?php if ( 'admin' == $sessionRole  ) {?>
+            <?php if ( 'admin' == $sessionRole || 'pharmacist' ==$sessionRole ) {?>
                 <!-- For Admin, Manager, Pharmacist-->
                 <li id="left" class="sideber__item sideber__item--modify">
                  <a href="index.php?id=dashboard"><i id="left" class="fas fa-tachometer-alt"></i>Dashboard</a>
@@ -115,27 +115,22 @@
                 
             
             <?php if ( 'admin' == $sessionRole || 'pharmacist'==$sessionRole ) {?>
-                <!-- Only For Admin -->
+                <!-- Only For Admin 
                 <li id="left" class="sideber__item sideber__item--modify<?php if ( 'addManager' == $id ) {
                                                                             echo " active";
                                                                         }?>">
-                    <a href="index.php?id=addManager"><i id="left" class="fas fa-user-plus"></i></i>Add Medicine</a>
+                    <a href="index.php?id=addManager"><i id="left" class="fas fa-user-plus"></i></i>Add Medicine</a> -->
                     <li id="left" class="sideber__item sideber__item--modify"><a href="index.php?id=addSalesman"><i id="left" class="fas fa-user-plus"></i></i>Add Customer</a></li>
-                    <li id="left" class="sideber__item sideber__item--modify"><a href="index.php?id=allSalesman"><i id="left" class="fas fa-user"></i>All Customer</a></li>
+                    <li id="left" class="sideber__item"><a href="index.php?id=allSalesman"><i id="left" class="fas fa-user"></i>All Customer</a></li>
+                    <li id="left" class="sideber__item sideber__item--modify" ><a href="index.php?id=addManager"><i id="left" class="fas fa-user-plus"></i></i>Add Medicine</a></li>
                 </li><?php }?>
                     <li id="left" class="sideber__item<?php if ( 'allManager' == $id ) {
-                echo " active";
-            }?>">
+                    echo " active";
+                        }?>">
+
                 <a href="index.php?id=allManager"><i id="left" class="fas fa-user"></i>All Medicines</a>
             </li>
           
-
-            <!-- For salesman -->
-            
-            <!-- For salesman -->
-
-
-           
 
             <?php if ( 'admin' == $sessionRole ) {?>
                 <!-- For Admin, Manager -->
@@ -143,8 +138,9 @@
                                                                             echo " active";
                                                                         }?>">
                     <a href="index.php?id=addPharmacist"><i id="left" class="fas fa-user-plus"></i></i>Add
-                        Pharmacist</a>
+Pharmacist</a>
                 </li><?php }?>
+
                 <li id="left" class="sideber__item<?php if ( 'allPharmacist' == $id ) {
                     echo " active";
                 }?>">
@@ -157,6 +153,8 @@
         </ul>
     
     </section>
+
+    
     <!--------------------------------- #Sideber -------------------------------->
 
 
